@@ -1,4 +1,5 @@
 import os
+import sys
 
 
 def folder_tree(directory, prefix='', dir_level=0, file=None):
@@ -22,5 +23,8 @@ def save_folder_tree(directory):
 
 
 if __name__ == '__main__':
-    directory = '/Users/mac/Projects/Contribution'
+    if len(sys.argv) < 2:
+        print("Usage: python folder_tree.py <directory>")
+        sys.exit(1)
+    directory = sys.argv[1]
     save_folder_tree(directory)
