@@ -12,7 +12,8 @@ def folder_tree(directory, prefix='', dir_level=0, file=None):
         item_path = os.path.join(directory, item)
         if os.path.isdir(item_path):
             file.write(f'{prefix}|-- {item}/\n')
-            folder_tree(item_path, prefix=prefix+'|   ', dir_level=dir_level+1, file=file)
+            folder_tree(item_path, prefix=prefix+'|   ',
+                        dir_level=dir_level+1, file=file)
 
 
 def save_folder_tree(directory):
