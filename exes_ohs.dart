@@ -1,7 +1,5 @@
-bool xo(String arg) {
-  return arg.toLowerCase().split('x').length ==
-      arg.toLowerCase().split('o').length;
-}
+bool xo(String arg) =>
+    arg.toLowerCase().split('x').length == arg.toLowerCase().split('o').length;
 
 // earlier solution:
 bool xo2(String arg) {
