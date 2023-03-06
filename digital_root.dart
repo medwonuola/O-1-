@@ -1,6 +1,4 @@
-int digitalRoot(int n) {
-  return n < 10 ? n : digitalRoot(n ~/ 10 + n % 10);
-}
+int digitalRoot(int n) => n < 10 ? n : digitalRoot(n ~/ 10 + n % 10);
 
 // More readable:
 int sol2(int n) {
