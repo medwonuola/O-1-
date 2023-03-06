@@ -12,3 +12,13 @@ int sol2(int n) {
   }
   return sum > 9 ? digitalRoot(sum) : sum;
 }
+
+// Another approach:
+int sol3(int n) {
+  int sum = 0;
+  n.toString().split('').forEach((e) {
+    sum += int.parse(e);
+  });
+
+  return sum > 9 ? sol3(sum) : sum;
+}
