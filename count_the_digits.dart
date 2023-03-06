@@ -1,12 +1,10 @@
 // method 1:
-int nbDig(int n, int d) {
-  int count = List.generate(n + 1, (index) => index * index)
-          .join()
-          .split(d.toString())
-          .length -
-      1;
-  return count;
-}
+int nbDig(int n, int d) =>
+    List.generate(n + 1, (index) => index * index)
+        .join()
+        .split(d.toString())
+        .length -
+    1;
 
 // method 2:
 int countDigits(int n, int d) {
