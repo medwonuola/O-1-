@@ -25,3 +25,23 @@ String sol(int n) {
 
   return sum == n ? "STRONG!!!!" : "Not Strong !!";
 }
+
+// approach 3:
+String sol2(int n) {
+  int _n = n;
+  int sum = 0;
+
+  while (_n > 0) {
+    int digit = _n % 10;
+    int factorial = 1;
+
+    for (int i = 2; i <= digit; i++) {
+      factorial *= i;
+    }
+
+    sum += factorial;
+    _n ~/= 10;
+  }
+
+  return sum == n ? "STRONG!!!!" : "Not Strong !!";
+}
