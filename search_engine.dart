@@ -35,3 +35,26 @@ class App {
     };
   }
 }
+
+class SearchEngine {
+  late final List<App> _apps;
+
+  SearchEngine.fromJson(String json) {
+    final List<dynamic> jsonList = jsonDecode(json);
+    _apps = jsonList.map((json) => App.fromJson(json)).toList();
+  }
+
+  List<App> search(String query) {
+    final List<App> results = [];
+    query.toLowerCase();
+
+    for (final app in _apps) {
+      if (app.name.toLowerCase().startsWith(query)) {
+        results.add(app);
+      }
+    }
+
+    results.sort((a, b) => b.popularity.compareTo(a.popularity));
+    return results;
+  }
+}
