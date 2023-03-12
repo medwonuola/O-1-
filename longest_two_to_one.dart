@@ -10,9 +10,3 @@ String longest(String a, String b) {
 }
 
 // String sol(String s1, String s2) => (s1 + s2).split("")..sort()..toSet().join("");
-
-void main(List<String> args) {
-  // print(sol('aretheyhere', 'yestheyarehere'));
-  print(longest('loopingisfunbutdangerous', 'lessdangerousthancoding'));
-  print(longest('inmanylanguages', 'theresapairoffunctions'));
-}
